@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import Testimonial from "./testimonial";
 
 export default function Home() {
@@ -48,11 +47,40 @@ export default function Home() {
     }
   ]
   return (
-    <div className={cn(
-      'grid grid-cols-1 gap-7 my-7',
-      'p-9'
-    )}>
-      { testimonials.map(data => <Testimonial key={data.student.name} {...data} />) }
+    <div className="max-w-6xl size-full p-7 my-7 content-center">
+      <div 
+        role="testimonial group"
+        className='flex flex-col sm:flex-row gap-7'>
+        <div 
+          role='testimonial-block'
+          className="flex flex-col gap-7 sm:w-3/4">
+          <div 
+            role="testimonial-row"
+            className="flex flex-col sm:flex-row gap-7"
+          >
+            <div className="sm:w-2/3">
+              <Testimonial {...testimonials[0]} />
+            </div>
+            <div className="sm:w-1/3">
+              <Testimonial {...testimonials[1]} />
+            </div>
+          </div>
+          <div 
+            role="testimonial-row"
+            className="flex flex-col sm:flex-row gap-7"
+          >
+            <div className="sm:w-1/3">
+              <Testimonial {...testimonials[2]} />
+            </div>
+            <div className="sm:w-2/3">
+              <Testimonial {...testimonials[3]} />
+            </div>
+          </div>
+        </div>
+        <div className="sm:w-1/4">
+          <Testimonial {...testimonials[4]} />
+        </div>
+      </div>
     </div>
   );
 }

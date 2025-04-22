@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(
-        'min-h-screen bg-Gray-100 antialiased', 
+        'flex flex-col h-screen items-center bg-Gray-100 antialiased',
         barlow.className
       )}>
         {children}

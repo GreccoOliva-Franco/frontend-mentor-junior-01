@@ -23,7 +23,7 @@ export default function Testimonial({
 }) {
     return (
         <div className={cn(
-            'flex flex-col gap-5 rounded-lg shadow-2xl',
+            'flex flex-col size-full gap-5 rounded-lg shadow-2xl',
             'p-8 pt-6',
             className
         )}>
